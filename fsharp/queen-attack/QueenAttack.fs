@@ -1,10 +1,10 @@
 ﻿module QueenAttack
 
-let create (position: int * int) = 
-    match position with
-    | (x, y) when x < 0 || y < 0 -> false
-    | (x, y) when x < 8 && y < 8 -> true
-    | _ -> false 
+let create (x: int, y: int) = 
+    if x < 0 || y < 0 then
+        false
+    else
+        x < 8 && y < 8  
 
 let canAttack (queen1: int * int) (queen2: int * int) = 
     if fst queen1 = fst queen2 then
