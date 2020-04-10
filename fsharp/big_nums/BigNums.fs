@@ -1,0 +1,1 @@
+let answer = 5I ** (int (4I ** (int (3I ** 2))));;
