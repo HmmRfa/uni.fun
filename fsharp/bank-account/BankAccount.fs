@@ -1,11 +1,36 @@
 ﻿module BankAccount
 
-let mkBankAccount() = failwith "You need to implement this function."
+type BankAccount = {
+    mutable balance: decimal;
+}
 
-let openAccount account = failwith "You need to implement this function."
+type Status = 
+    | OpenAcc of BankAccount
+    | ClosedAcc
 
-let closeAccount account = failwith "You need to implement this function."
+let mkBankAccount() = ClosedAcc
 
-let getBalance account = failwith "You need to implement this function."
+let openAccount account = 
+    OpenAcc {balance = 0.0m}
 
-let updateBalance change account = failwith "You need to implement this function."
+let closeAccount account = 
+    match account with
+    | OpenAcc status -> ClosedAcc
+    | ClosedAcc _ -> failwith "Account closed already."
+
+
+let getBalance account = 
+    match account with
+    | OpenAcc status -> Some status.balance
+    | ClosedAcc _ -> None
+
+let updateBalance change account = 
+    match account with
+    | OpenAcc status -> 
+        lock (status) (fun _ -> 
+            status.balance <- status.balance + change
+            OpenAcc status)
+    | ClosedAcc _ -> failwith "Account closed."
+
+
+    
