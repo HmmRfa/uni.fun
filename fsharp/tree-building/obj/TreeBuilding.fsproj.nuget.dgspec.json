@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/krauseh/Documents/Uni/Fun/uni.fun/fsharp/tree-building/TreeBuilding.fsproj": {}
+  },
+  "projects": {
+    "/home/krauseh/Documents/Uni/Fun/uni.fun/fsharp/tree-building/TreeBuilding.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/krauseh/Documents/Uni/Fun/uni.fun/fsharp/tree-building/TreeBuilding.fsproj",
+        "projectName": "TreeBuilding",
+        "projectPath": "/home/krauseh/Documents/Uni/Fun/uni.fun/fsharp/tree-building/TreeBuilding.fsproj",
+        "packagesPath": "/home/krauseh/.nuget/packages/",
+        "outputPath": "/home/krauseh/Documents/Uni/Fun/uni.fun/fsharp/tree-building/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/krauseh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "BenchmarkDotNet": {
+              "target": "Package",
+              "version": "[0.12.1, )",
+              "generatePathProperty": true
+            },
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.7.0, )",
+              "generatePathProperty": true
+            },
+            "FsUnit.xUnit": {
+              "target": "Package",
+              "version": "[3.8.1, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.0, )",
+              "generatePathProperty": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[3.0.3, 3.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

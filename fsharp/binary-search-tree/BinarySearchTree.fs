@@ -2,8 +2,8 @@
 
 type Node = {
     data: int;
-    mutable leftNode: Node option;
-    mutable rightNode: Node option;
+    leftNode: Node option;
+    rightNode: Node option;
 }
 
 let left node  = node.leftNode
@@ -18,11 +18,9 @@ let rec insertNode value node =
     | Some n ->
         match n.data with 
         | x when value <= x -> 
-            n.leftNode <- insertNode value n.leftNode
-            Some n
+            Some {n with leftNode = (insertNode value n.leftNode)}
         | x -> 
-            n.rightNode <- insertNode value n.rightNode
-            Some n
+            Some {n with rightNode = (insertNode value n.rightNode)}
         
 
 let create items = 
@@ -45,3 +43,9 @@ let rec sort node = seq {
 let sortedData (node: Node) = 
     sort (Some(node)) 
     |> Seq.toList
+
+
+let test = Some {data = 1; leftNode = None; rightNode = None}
+let test2 = Some {data = 2; leftNode = test; rightNode = None}
+
+let test3 = {test with leftNode = test2}
